@@ -19,11 +19,21 @@ export interface ToolEvent extends Event {
 }
 
 export interface StatusEvent extends Event {
-    status: 'step-start' | 'reasoning' | 'step-finished';
+    status: 'step-start' | 'reasoning' | 'step-finish';
+    tokens?: number;
+    cost?: number;
 }
 
 export interface MessageEvent extends Event {
     content: string;
 }
 
-export type EventType = 'agent' | 'tool' | 'status' | 'message';
+export interface TodoEvent extends Event {
+    todos: {
+        content: string;
+        priority: 'high' | 'medium' | 'low';
+        status: 'pending' | 'in_progress' | 'completed' | 'cancelled';
+    }[]
+}
+
+export type EventType = 'agent' | 'tool' | 'status' | 'message' | 'todo';
