@@ -24,7 +24,6 @@ export type MCP = {
 export type Brand = {
     logo: string | null;
     name: string;
-    model?: string;
 }
 
 export type Todo = {
