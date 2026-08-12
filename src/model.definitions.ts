@@ -29,6 +29,6 @@ export type Brand = {
 
 export type Todo = {
     content: string;
-    status: 'pending' | 'completed';
+    status: 'pending' | 'in_progress' | 'completed' | 'cancelled';
     priority: 'high' | 'medium' | 'low';
 }
