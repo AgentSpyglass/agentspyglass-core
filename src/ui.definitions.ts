@@ -3,9 +3,8 @@ export type Agent = {
     role: 'primary' | 'subagent';
     name: string;
     prompt: string;
-    model: string;
-    brand: Brand;
     status?: 'reasoning' | 'completed';
+    brand: Brand;
 }
 
 export type Tool = {
@@ -23,8 +22,8 @@ export type MCP = {
 
 export type Brand = {
     logo: string | null;
+    model: string;
     name: string;
-
 }
 
 export type Todo = {
