@@ -1,3 +1,11 @@
+export type TokenBreakdown = {
+    total: number;
+    input: number;
+    output: number;
+    reasoning: number;
+    cache: { read: number; write: number };
+};
+
 export type Agent = {
     sessionId: string;
     role: 'primary' | 'subagent';

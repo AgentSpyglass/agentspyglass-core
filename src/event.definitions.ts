@@ -1,3 +1,5 @@
+import { TokenBreakdown } from './model.definitions';
+
 export interface Event {
     type: string;
     sessionId: string;
@@ -9,6 +11,9 @@ export interface AgentEvent extends Event {
     model: string;
     provider: string;
     prompt: string;
+    cost?: number;
+    tokens?: number;
+    targetSessionId?: string;
 }
 
 export interface ToolEvent extends Event {
@@ -20,7 +25,7 @@ export interface ToolEvent extends Event {
 
 export interface StatusEvent extends Event {
     status: 'step-start' | 'reasoning' | 'step-finish';
-    tokens?: number;
+    tokens?: TokenBreakdown;
     cost?: number;
 }
 
