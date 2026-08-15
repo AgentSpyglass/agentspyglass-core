@@ -14,6 +14,9 @@ export type Agent = {
     model: string;
     brand: Brand;
     status?: 'reasoning' | 'completed';
+    cost?: number;
+    tokens?: number;
+    targetSessionId?: string;
 }
 
 export type Tool = {
