@@ -27,6 +27,7 @@ export interface StatusEvent extends Event {
     status: 'step-start' | 'reasoning' | 'step-finish';
     tokens?: TokenBreakdown;
     cost?: number;
+    contextUsed?: number;
 }
 
 export interface MessageEvent extends Event {
