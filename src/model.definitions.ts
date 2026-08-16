@@ -1,3 +1,11 @@
+export type TokenBreakdown = {
+    total: number;
+    input: number;
+    output: number;
+    reasoning: number;
+    cache: { read: number; write: number };
+};
+
 export type Agent = {
     sessionId: string;
     role: 'primary' | 'subagent';
@@ -6,6 +14,9 @@ export type Agent = {
     model: string;
     brand: Brand;
     status?: 'reasoning' | 'completed';
+    cost?: number;
+    tokens?: number;
+    targetSessionId?: string;
 }
 
 export type Tool = {
