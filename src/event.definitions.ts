@@ -31,6 +31,9 @@ export interface StatusEvent extends Event {
 
 export interface MessageEvent extends Event {
     content: string;
+    role: 'user' | 'assistant';
+    messageID: string;
+    parentID?: string;
 }
 
 export interface TodoEvent extends Event {
