@@ -10,7 +10,6 @@ export interface AgentEvent extends Event {
     name: string;
     model: string;
     provider: string;
-    prompt: string;
     cost?: number;
     tokens?: number;
     targetSessionId?: string;
