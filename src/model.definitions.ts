@@ -10,7 +10,6 @@ export type Agent = {
     sessionId: string;
     role: 'primary' | 'subagent';
     name: string;
-    prompt: string;
     model: string;
     brand: Brand;
     status?: 'reasoning' | 'completed';
