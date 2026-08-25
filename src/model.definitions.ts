@@ -12,6 +12,8 @@ export type Agent = {
     name: string;
     model: string;
     brand: Brand;
+    /** Optional human-facing session label; UI falls back to a truncated sessionId when absent. */
+    title?: string;
     status?: 'reasoning' | 'completed';
     cost?: number;
     tokens?: number;
