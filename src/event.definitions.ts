@@ -13,6 +13,7 @@ export interface AgentEvent extends Event {
     cost?: number;
     tokens?: number;
     targetSessionId?: string;
+    title?: string;
 }
 
 export interface ToolEvent extends Event {
