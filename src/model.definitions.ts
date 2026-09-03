@@ -28,6 +28,7 @@ export type Tool = {
 
 export type MCP = {
     name: string;
+    side: 'left' | 'right';
     brand: Brand;
     tools: Tool[];
 }
